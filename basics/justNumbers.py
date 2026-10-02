@@ -1,3 +1,18 @@
-# Your mission: Request a code and determine if
-# all its characters are digits. If so,
-# convert it to an integer.
+from components import clearConsole, pauseConsole, printWarning, printSuccess
+
+
+def main():
+    clearConsole()
+    codeValue = input("Ingrese un código: ").strip()
+
+    if codeValue.isdigit():
+        numberValue = int(codeValue)
+        printSuccess(f"El código contiene solo dígitos. Entero convertido: {numberValue}")
+    else:
+        printWarning("El código no contiene solo dígitos.")
+
+    pauseConsole()
+
+
+if __name__ == "__main__":
+    main()
