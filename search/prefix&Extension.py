@@ -1,3 +1,17 @@
-# Your mission: Request the name of a file and
-#  indicate if it ends in .csv and if it
-#  begins with report.x
+from components import clearConsole, pauseConsole
+
+
+def main():
+    clearConsole()
+    fileName = input("Ingrese el nombre del archivo: ").strip().lower()
+
+    hasCsvExtension = fileName.endswith(".csv")
+    startsWithReport = fileName.startswith("report")
+
+    print(f"¿Termina en .csv?: {hasCsvExtension}")
+    print(f"¿Comienza con 'report'?: {startsWithReport}")
+    pauseConsole()
+
+
+if __name__ == "__main__":
+    main()

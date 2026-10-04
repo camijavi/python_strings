@@ -1,5 +1,20 @@
-# Your mission: Receive a name with unnecessary
-#  spaces and a mix of uppercase and lowercase
-#  letters. Clean up the ends and present the name
-#  in title format.
+from components import clearConsole, pauseConsole, printWarning
 
+
+def main():
+    clearConsole()
+    nameValue = input("Ingrese un nombre: ")
+    cleanName = nameValue.strip()
+
+    if not cleanName:
+        printWarning("No ingresaste un nombre válido.")
+        pauseConsole()
+        return
+
+    normalizedName = cleanName.title()
+    print(f"Nombre normalizado: {normalizedName}")
+    pauseConsole()
+
+
+if __name__ == "__main__":
+    main()

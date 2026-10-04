@@ -1,4 +1,17 @@
-# Your mission: Receive a list of names
-#  separated by semicolons, create a
-#  clean list, and display each name on
-#  a line.
+from components import clearConsole, pauseConsole
+
+
+def main():
+    clearConsole()
+    namesValue = input("Ingrese nombres separados por punto y coma (;): ")
+    cleanNamesList = [nameValue.strip() for nameValue in namesValue.split(";") if nameValue.strip()]
+
+    print("Lista de nombres:")
+    for nameValue in cleanNamesList:
+        print(nameValue)
+
+    pauseConsole()
+
+
+if __name__ == "__main__":
+    main()
